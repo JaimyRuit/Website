@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <title>Esri</title>
+
+        <!--base href="C:\Users\Thinkpad T560\OneDrive\Geo Media & Design\JAAR 3\HWUD\04_webdesign\Les_1_HTML"-->
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="main.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no width=device-width" />
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+
+
+ <div class="flex-container">
+   <div class="topnav">
+     <a class="active" href="index.html">Home</a></li>
+       <li class="dropdown">
+         <a href="javascript:void(0)" class="dropbtn">WEBMAPS</a>
+         <div class="dropdown-content">
+           <a href="leaflet.html">Leaflet</a>
+           <a href="esri.html">ESRI</a>
+           <a href="mapbox.html">Mapbox</a>
+         </div>
+   </div>
+   <div><h1 class="mieren">Mapbox</h1></div>
+   <div>
+     <div id='mapboxmap'></div>
+     <script>
+     mapboxgl.accessToken = 'pk.eyJ1IjoiamFpbXlyIiwiYSI6ImNrN2JyN2ExNTA1YnEzbHJ5dHJqbndhMGYifQ.S4l-jh-E3D7j79PL-mfarQ';
+     var mapboxmap = new mapboxgl.Map({
+     container: 'mapboxmap',
+     style: 'mapbox://styles/mapbox/light-v9'
+     });
+     </script>
+ </div>
+
+</body>
+
+</html>
+<!--
+
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[     CODE THE WEB     ]:::::]
+    [:::::[  http://brackets.io  ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+-->

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Leaflet</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+</head>
+<body>
+
+ <!--HEADER-->
+ <!--SLIDER-->
+ <!--
+ <div class="w3-content w3-display-container">
+   <img class="mySlides" src="images/adam.jpg" style="width:100%">
+   <img class="mySlides" src="images/sloot.jpg" style="width:100%">
+   <img class="mySlides" src="images/vogels.jpg" style="width:100%">
+   <img class="mySlides" src="images/wortels.jpg" style="width:100%">
+ </div>
+ <script class="sliders">
+ var myIndex = 0;
+ carousel();
+
+ function carousel() {
+   var i;
+   var x = document.getElementsByClassName("mySlides");
+   for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+   }
+   myIndex++;
+   if (myIndex > x.length) {myIndex = 1}
+   x[myIndex-1].style.display = "block";
+   setTimeout(carousel, 2000); // Change image every 2 seconds
+ }
+ </script>
+ -->
+ <div class="flex-container">
+   <div class="topnav">
+     <a class="active" href="index.html">Home</a>
+       <li class="dropdown">
+         <a href="javascript:void(0)" class="dropbtn">WEBMAPS</a>
+         <div class="dropdown-content">
+           <a href="leaflet.html">Leaflet</a>
+           <a href="esri.html">ESRI</a>
+           <a href="mapbox.html">Mapbox</a>
+   </div>
+ </div>
+   <div><h1 class="mieren">Leaflet</h1></div>
+   <div>
+     <div id="lfltid"></div>
+     <script src="kwetsb"></script>
+           <script>
+               var map = L.map('lfltid').setView([52.12, 5.16], 8);
+
+               L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                   maxZoom: 18,
+                   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                   id: 'mapbox/light-v10',
+                   tileSize: 512,
+                   zoomOffset: -1
+               }).addTo(map);
+               var geoJsonLayer = L.geoJson(geojson).addTo(map);
+
+
+
+
+           </script>
+     </div>
+  </div>
+
+<h1 class="mieren">Leaflet</h1>
+<hr>
+<div id="lfltid"></div>
+<script>
+    var mymap = L.map('lfltid').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(mymap);
+
+
+      // a Leaflet marker is used by default to symbolize point features.
+var EPS =  L.esri.featureLayer({
+url: 'https://services7.arcgis.com/iBXh7pL44O3uSis0/ArcGIS/rest/services/YangtzeRiverBasinStudy_yang/FeatureServer/0',
+pointToLayer: function (geojson, latlng)
+{
+  return L.marker(latlng, {icon: icon}).bindPopup(geojson.properties.naam);
+}
+}).addTo(map);
+</script>
+</body>
+
+</html>
