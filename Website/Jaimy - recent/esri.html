@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+        <title>Esri</title>
+
+        <!--base href="C:\Users\Thinkpad T560\OneDrive\Geo Media & Design\JAAR 3\HWUD\04_webdesign\Les_1_HTML"-->
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="main.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no width=device-width" />
+
+        <!-- Load Leaflet from CDN -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+        <!-- Load Esri Leaflet from CDN -->
+        <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+        integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+        crossorigin=""></script>
+
+</head>
+<body>
+
+ <!--HEADER-->
+ <!--SLIDER-->
+ <!--
+ <div class="w3-content w3-display-container">
+   <img class="mySlides" src="images/adam.jpg" style="width:100%">
+   <img class="mySlides" src="images/sloot.jpg" style="width:100%">
+   <img class="mySlides" src="images/vogels.jpg" style="width:100%">
+   <img class="mySlides" src="images/wortels.jpg" style="width:100%">
+ </div>
+ <script class="sliders">
+ var myIndex = 0;
+ carousel();
+
+ function carousel() {
+   var i;
+   var x = document.getElementsByClassName("mySlides");
+   for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+   }
+   myIndex++;
+   if (myIndex > x.length) {myIndex = 1}
+   x[myIndex-1].style.display = "block";
+   setTimeout(carousel, 2000); // Change image every 2 seconds
+ }
+ </script>
+ -->
+
+ <div class="flex-container">
+   <div class="topnav">
+     <a class="active" href="index.html">Home</a></li>
+       <li class="dropdown">
+         <a href="javascript:void(0)" class="dropbtn">WEBMAPS</a>
+         <div class="dropdown-content">
+           <a href="leaflet.html">Leaflet</a>
+           <a href="esri.html">ESRI</a>
+           <a href="mapbox.html">Mapbox</a>
+         </div>
+   </div>
+   <div><h1 class="mieren">ESRI</h1></div>
+   <div>
+     <div id="esrimap"></div>
+     <script src="kwetsb.js"></script>
+     <script>
+       var map = L.map('esrimap').setView([52.12, 5.16], 8);
+
+       L.esri.basemapLayer('Topographic').addTo(map);
+
+       // a Leaflet marker is used by default to symbolize point features.
+       var geoJsonLayer = L.geoJson(geojson).addTo(map);
+
+     </script>
+   </div>
+ </div>
+
+</body>
+
+</html>
+<!--
+
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[     CODE THE WEB     ]:::::]
+    [:::::[  http://brackets.io  ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+-->

@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>De Beste site ooit!</title>
+        <title>ATLAS SITE</title>
         <meta name="Beschrijving" content="Alles over mieren">
-        <!--base href="C:\Users\Thinkpad T560\OneDrive\Geo Media & Design\JAAR 3\HWUD\04_webdesign\Les_1_HTML"--> 
+        <!--base href="C:\Users\Thinkpad T560\OneDrive\Geo Media & Design\JAAR 3\HWUD\04_webdesign\Les_1_HTML"-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,18 +15,17 @@
 </head>
 <body>
 
-        
-    
-
 <!--HEADER-->
+
+<!--SLIDER-->
+<!--
 <div class="w3-content w3-display-container">
   <img class="mySlides" src="images/adam.jpg" style="width:100%">
   <img class="mySlides" src="images/sloot.jpg" style="width:100%">
   <img class="mySlides" src="images/vogels.jpg" style="width:100%">
   <img class="mySlides" src="images/wortels.jpg" style="width:100%">
 </div>
-
-<script>
+<script class="sliders">
 var myIndex = 0;
 carousel();
 
@@ -34,40 +33,45 @@ function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
   myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
-  
-<ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html">About me</a></li>
-          <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Hudson</a>
-            <div class="dropdown-content">
-              <a href="historiehudson.html">Historie</a>
-              <a href="vervuiling.html">Vervuiling</a>
-              <a href="natuur.html">Natuur</a>
-            </div>
-          </li>
-              <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Colorado</a>
-            <div class="dropdown-content">
-              <a href="historiecolorado.html">Historie</a>
-              <a href="vervuiling.html">Vervuiling</a>
-              <a href="natuur.html">Natuur</a>
-            </div>
-          </li>
-        </ul>
-    
-             
+-->
+<div class="flex-container">
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">WEBMAPS</a>
+        <div class="dropdown-content">
+          <a href="leaflet.html">Leaflet</a>
+          <a href="esri.html">ESRI</a>
+          <a href="mapbox.html">Mapbox</a>
+  </div>
+</div>
+  <div><h1 class="mieren">HOME</h1></div>
+  <div><p>
+    Op deze website kunt u vinden waar in de buurt zorginstellingen zijn!
+  </p></div>
+</div>
+<!--<ul>
+<li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Hudson</a>
+    <div class="dropdown-content">
+      <a href="leaflet.html">Leaflet</a>
+      <a href="esri.html">ESRI</a>
+      <a href="mapbox.html">Mapbox</a>
+    </div>
+  </ul>-->
 
-        
-        
+
+
+
 </body>
 
 </html>
